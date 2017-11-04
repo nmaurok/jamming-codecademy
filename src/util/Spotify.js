@@ -1,7 +1,7 @@
 const appClientID = "78ef8cf59bf4450d86bf1dfe1c6d498d";
-const appRedirectURI = "http://localhost:3000/";
+const appRedirectURI = "jamming-project.surge.sh";
 
-var accessToken;
+let accessToken;
 
 const Spotify = {
   getAccessToken(){
@@ -52,7 +52,7 @@ const Spotify = {
     }
 
     const access = Spotify.getAccessToken();
-    const headers = { Authorization: `Bearer ${access}` };
+    const headers = { "Authorization": `Bearer ${access}` };
     let userID;
 
     return fetch('https://api.spotify.com/v1/me', {headers: headers}
