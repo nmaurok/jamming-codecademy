@@ -2,7 +2,6 @@ const appClientID = "78ef8cf59bf4450d86bf1dfe1c6d498d";
 const appRedirectURI = "http://localhost:3000/";
 
 var accessToken;
-var expirationTime = 0;
 
 const Spotify = {
   getAccessToken(){
@@ -43,8 +42,6 @@ const Spotify = {
         artist: track.artists[0].name,
         album: track.album.name,
         uri: track.uri,
-        preview:track.preview_url,
-        art: track.album.images[0].url
       }));
     });
   },

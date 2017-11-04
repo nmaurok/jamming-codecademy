@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import { SearchBar } from '../SearchBar/SearchBar.js';
-import { SearchResults } from '../SearchResults/SearchResults.js';
-import { Playlist } from '../Playlist/Playlist.js';
-import { Spotify } from '../../util/Spotify.js';
+import SearchBar from '../SearchBar/SearchBar.js';
+import SearchResults from '../SearchResults/SearchResults.js';
+import Playlist from '../Playlist/Playlist.js';
+import Spotify from '../../util/Spotify.js';
 
 class App extends Component {
   constructor(props){
@@ -11,15 +11,15 @@ class App extends Component {
 
     this.state = {
       searchResults: [],
-      playlistName: 'New Playlist',
+      playlistName: "New Playlist",
       playlistTracks: []
     };
 
-    this.addTrack.bind(this);
-    this.removeTrack.bind(this);
-    this.updatePlaylistName.bind(this);
-    this.savePlaylist.bind(this);
-    this.search.bind(this);
+    this.addTrack = this.addTrack.bind(this);
+    this.removeTrack = this.removeTrack.bind(this);
+    this.updatePlaylistName = this.updatePlaylistName.bind(this);
+    this.savePlaylist = this.savePlaylist.bind(this);
+    this.search = this.search.bind(this);
   }
 
   addTrack(track){
